@@ -39,7 +39,7 @@ export const UserList = ({ data }) => {
                   <Box className="avatarName">
                     <Avatar
                       alt="Diego Plaza"
-                      src="/static/images/avatar/1.jpg"
+                      src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg"
                     />
                     <Box className="avatarName__text">
                       <Typography className="avatarName__text__name">

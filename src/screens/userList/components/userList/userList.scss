@@ -1,0 +1,69 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tableCell {
+    border-right-style: solid;
+    border-right-color: $border;
+    display: tableRowGroup;
+    border-left-width: thin;  
+    &__name {
+        width: 30%;
+        font-weight: bold !important;
+    }    
+    &__description {
+        width: 70%;
+        font-weight: bold !important;
+    }
+}
+
+.hoverEliminar {
+    &:hover {
+        .avatarName__text__eliminar {
+            color: $primary;
+            display: block;
+        }
+      }
+}
+
+.avatarName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__text {
+        margin-left: 10px;
+        align-self: center;
+        margin-top: 20px;
+        padding: 10px;
+        max-height: 40px;
+        min-height: 40px;
+        &__name {
+            color: $font-dark;
+            font-weight: bold !important;
+        }
+        &__eliminar {
+            color: $primary;
+        }    
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 100%;
+    margin: 0em;
+    justify-content: space-between;
+    margin-top: 1em;
+    &__buttonNext {
+        color: #B5B5B5 !important;
+    }
+    &__icon {
+        margin-left: 15px;
+        margin-right: 15px;
+        color: $primary;
+    }
+}

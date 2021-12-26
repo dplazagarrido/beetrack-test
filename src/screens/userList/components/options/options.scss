@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    &__searchBar{
+        width: 30%;
+        @media screen and (max-width: 700px){
+            width: 80%;
+        }
+    } 
+    &__button {
+        background-color: $primary !important;
+        margin-left: 1em !important;
+
+    }
+}
+
+.iconSearch {
+    color: $primary !important;
+}

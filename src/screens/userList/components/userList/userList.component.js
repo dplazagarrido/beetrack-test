@@ -13,7 +13,10 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 import labels from "./labels";
-import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill} from "react-icons/bs"; 
+import {
+  BsFillArrowRightCircleFill,
+  BsFillArrowLeftCircleFill,
+} from "react-icons/bs";
 
 export const UserList = ({ data }) => {
   return (
@@ -22,7 +25,9 @@ export const UserList = ({ data }) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="tableCell__name">{labels.lblName}</TableCell>
+              <TableCell className="tableCell__name">
+                {labels.lblName}
+              </TableCell>
               <TableCell className="tableCell__description" align="left">
                 {labels.lblDescription}
               </TableCell>
@@ -49,19 +54,24 @@ export const UserList = ({ data }) => {
                         className="avatarName__text__delete"
                         variant="inherit"
                         display="none"
-                        onClick={() => (console.log('ELIMINADO'))}
+                        onClick={() => console.log("ELIMINADO")}
                       >
                         {labels.lblDelete}
                       </Typography>
                     </Box>
                   </Box>
                 </TableCell>
-                <TableCell className="avatarName__text__description" align="left" component="tr" scope="column">
-                  Lorem Ipsum is simply dummy texts of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummsssy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book
+                <TableCell align="left" component="tr" scope="column">
+                  <Typography
+                    variant="body2"
+                    className="avatarName__text__description"
+                  >
+                    Lorem Ipsum is simply dummy texts of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummsssy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book
+                  </Typography>
                 </TableCell>
               </TableRow>
             ))}
@@ -69,8 +79,30 @@ export const UserList = ({ data }) => {
         </Table>
       </TableContainer>
       <Box className="pagination">
-        <Button className="pagination__buttonNext" variant="text" startIcon={<BsFillArrowLeftCircleFill className="pagination__icon" size="1.1em"/>}>Página anterior</Button>
-        <Button className="pagination__buttonNext" variant="text" endIcon={<BsFillArrowRightCircleFill className="pagination__icon" size="1.1em"/>}>Siguiente página</Button>
+        <Button
+          className="pagination__buttonNext"
+          variant="text"
+          startIcon={
+            <BsFillArrowLeftCircleFill
+              className="pagination__icon"
+              size="1.1em"
+            />
+          }
+        >
+          {labels.btnBack}
+        </Button>
+        <Button
+          className="pagination__buttonNext"
+          variant="text"
+          endIcon={
+            <BsFillArrowRightCircleFill
+              className="pagination__icon"
+              size="1.1em"
+            />
+          }
+        >
+          {labels.btnNext}
+        </Button>
       </Box>
     </Box>
   );

@@ -22,16 +22,16 @@ export const UserList = ({ data }) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="tableCell__name">{labels.lblNombre}</TableCell>
+              <TableCell className="tableCell__name">{labels.lblName}</TableCell>
               <TableCell className="tableCell__description" align="left">
-                {labels.lblDescripcion}
+                {labels.lblDescription}
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.map((row) => (
               <TableRow
-                className="hoverEliminar"
+                className="hoverDelete"
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
@@ -46,17 +46,17 @@ export const UserList = ({ data }) => {
                         Diego Plaza
                       </Typography>
                       <Typography
-                        className="avatarName__text__eliminar"
+                        className="avatarName__text__delete"
                         variant="inherit"
                         display="none"
                         onClick={() => (console.log('ELIMINADO'))}
                       >
-                        {labels.lblEliminar}
+                        {labels.lblDelete}
                       </Typography>
                     </Box>
                   </Box>
                 </TableCell>
-                <TableCell align="left" component="tr" scope="column">
+                <TableCell className="avatarName__text__description" align="left" component="tr" scope="column">
                   Lorem Ipsum is simply dummy texts of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummsssy text ever since the 1500s, when an unknown

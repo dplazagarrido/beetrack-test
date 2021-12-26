@@ -2,27 +2,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 2em;
 }
 
 .tableCell {
     border-right-style: solid;
     border-right-color: $border;
     display: tableRowGroup;
-    border-left-width: thin;  
+    border-right-width: 2px;
     &__name {
         width: 30%;
         font-weight: bold !important;
+        color: $font-dark !important;
     }    
     &__description {
         width: 70%;
         font-weight: bold !important;
+        color: $font-dark !important;
     }
 }
 
-.hoverEliminar {
+.hoverDelete {
     &:hover {
-        .avatarName__text__eliminar {
+        .avatarName__text__delete {
             color: $primary;
             display: block;
         }
@@ -34,19 +36,22 @@
     flex-direction: row;
     align-items: center;
     &__text {
-        margin-left: 10px;
+        margin-left: 0.5em;
         align-self: center;
-        margin-top: 20px;
-        padding: 10px;
-        max-height: 40px;
-        min-height: 40px;
+        margin-top: 1.5em;
+        padding: 0.8em;
+        max-height: 3em;
+        min-height: 3em;
         &__name {
-            color: $font-dark;
+            color: $font-dark !important;
             font-weight: bold !important;
         }
-        &__eliminar {
+        &__delete {
             color: $primary;
         }    
+        &__description {
+            color: $font-dark !important;
+        }
     }
 }
 
@@ -62,8 +67,8 @@
         color: #B5B5B5 !important;
     }
     &__icon {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 1.1em;
+        margin-right: 1.1em;
         color: $primary;
     }
 }

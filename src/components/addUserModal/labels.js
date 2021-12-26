@@ -1,7 +1,7 @@
 const labels = {
-    txtNuevoContacto: "Agregar nuevo Contacto",
+    txtNewContact: "Agregar nuevo Contacto",
     lblUrl: "URL Imagen de perfil",
-    lblNombre: "Nombre",
+    lblName: "Nombre",
     lblDescp: "Descripción",
     lblBtn: "Guardar",
 };

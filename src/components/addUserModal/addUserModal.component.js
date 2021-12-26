@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import labels from "../labels";
+import labels from "./labels";
 
 export const AddUserModal = ({ openModal, handleOpen }) => {
   return (
@@ -24,9 +24,8 @@ export const AddUserModal = ({ openModal, handleOpen }) => {
             <Typography
               className="modal__header__text"
               variant="h6"
-              component="h2"
             >
-              {labels.txtNuevoContacto}
+              {labels.txtNewContact}
             </Typography>
           </Box>
           <Divider></Divider>
@@ -42,7 +41,7 @@ export const AddUserModal = ({ openModal, handleOpen }) => {
               </FormControl>
               <FormControl className="modal__form__formControl" required>
                 <TextField
-                  label={labels.lblNombre}
+                  label={labels.lblName}
                   //value={name}
                   // onChange={handleChange}
                   required

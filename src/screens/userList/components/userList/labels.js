@@ -1,7 +1,7 @@
 const labels = {
-    lblDescripcion: "Descripción",
-    lblNombre: "Nombre",
-    lblEliminar: "Eliminar",
+    lblDescription: "Descripción",
+    lblName: "Nombre",
+    lblDelete: "Eliminar",
 };
 
 export default labels;

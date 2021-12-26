@@ -1,0 +1,13 @@
+.beetrackText {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    &__test {
+        color: $font-light;
+    }
+    &__beetrack {
+        color: $font-dark;
+        margin-left: 5px !important;
+        font-weight: bold !important;
+    }
+}

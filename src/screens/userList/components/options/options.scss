@@ -13,6 +13,11 @@
         }
         height: 2.3em;
         background-color: white;
+        &.MuiOutlinedInput-root {
+            &.Mui-focused fieldset {
+              border-color: $primary;
+            }
+          }
     } 
     &__button {
         background-color: $primary !important;

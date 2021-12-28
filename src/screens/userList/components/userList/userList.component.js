@@ -18,7 +18,13 @@ import {
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
 
-export const UserList = ({ data }) => {
+export const UserList = ({
+  data,
+  handleNextPage,
+  handleBackPage,
+  buttonsVisibles,
+  deleteUser,
+}) => {
   return (
     <Box className="list">
       <TableContainer component={Paper}>
@@ -42,19 +48,16 @@ export const UserList = ({ data }) => {
               >
                 <TableCell className="tableCell" component="tr" scope="column">
                   <Box className="avatarName">
-                    <Avatar
-                      alt="Diego Plaza"
-                      src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg"
-                    />
+                    <Avatar alt={row.name} src={row.photo} />
                     <Box className="avatarName__text">
                       <Typography className="avatarName__text__name">
-                        Diego Plaza
+                        {row.name}
                       </Typography>
                       <Typography
                         className="avatarName__text__delete"
                         variant="inherit"
                         display="none"
-                        onClick={() => console.log("ELIMINADO")}
+                        onClick={() => deleteUser(row.id)}
                       >
                         {labels.lblDelete}
                       </Typography>
@@ -66,11 +69,7 @@ export const UserList = ({ data }) => {
                     variant="body2"
                     className="avatarName__text__description"
                   >
-                    Lorem Ipsum is simply dummy texts of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummsssy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book
+                    {row.description}
                   </Typography>
                 </TableCell>
               </TableRow>
@@ -79,30 +78,40 @@ export const UserList = ({ data }) => {
         </Table>
       </TableContainer>
       <Box className="pagination">
-        <Button
-          className="pagination__buttonNext"
-          variant="text"
-          startIcon={
-            <BsFillArrowLeftCircleFill
-              className="pagination__icon"
-              size="1.1em"
-            />
-          }
-        >
-          {labels.btnBack}
-        </Button>
-        <Button
-          className="pagination__buttonNext"
-          variant="text"
-          endIcon={
-            <BsFillArrowRightCircleFill
-              className="pagination__icon"
-              size="1.1em"
-            />
-          }
-        >
-          {labels.btnNext}
-        </Button>
+        {buttonsVisibles?.back ? (
+          <Button
+            className="pagination__buttonNext"
+            variant="text"
+            onClick={handleBackPage}
+            startIcon={
+              <BsFillArrowLeftCircleFill
+                className="pagination__icon"
+                size="1.1em"
+              />
+            }
+          >
+            {labels.btnBack}
+          </Button>
+        ) : (
+          <Box />
+        )}
+        {buttonsVisibles?.next ? (
+          <Button
+            className="pagination__buttonNext"
+            variant="text"
+            onClick={handleNextPage}
+            endIcon={
+              <BsFillArrowRightCircleFill
+                className="pagination__icon"
+                size="1.1em"
+              />
+            }
+          >
+            {labels.btnNext}
+          </Button>
+        ) : (
+          <Box />
+        )}
       </Box>
     </Box>
   );

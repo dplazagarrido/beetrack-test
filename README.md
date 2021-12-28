@@ -92,6 +92,7 @@ A continuación se realizará una referencia a la arquitectura establecida en el
 - [React](https://es.reactjs.org/)
 - [Material-UI](https://mui.com/)
 - [Redux](https://react-redux.js.org/)
+- [Redux-Thunk](https://github.com/reduxjs/redux-thunk)
 - [Axios](https://es.reactjs.org/)
 - [Sass](https://sass-lang.com/)
 - [React-icons](https://react-icons.github.io/react-icons/)

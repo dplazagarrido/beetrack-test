@@ -10,7 +10,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import labels from "./labels";
 
-export const AddUserModal = ({ openModal, handleOpen }) => {
+export const AddUserModal = ({ openModal, handleOpen, addUser }) => {
   return (
     <Box className="contentModal">
       <Modal
@@ -21,37 +21,31 @@ export const AddUserModal = ({ openModal, handleOpen }) => {
       >
         <Box className="modal">
           <Box className="modal__header">
-            <Typography
-              className="modal__header__text"
-              variant="h6"
-            >
+            <Typography className="modal__header__text" variant="h6">
               {labels.txtNewContact}
             </Typography>
           </Box>
           <Divider></Divider>
           <Box className="modal__form">
-            <form>
+            <form onSubmit={addUser}>
               <FormControl className="modal__form__formControl" required>
                 <TextField
                   label={labels.lblUrl}
-                  //value={name}
-                  // onChange={handleChange}
+                  name="photo"
                   required
                 />
               </FormControl>
               <FormControl className="modal__form__formControl" required>
                 <TextField
                   label={labels.lblName}
-                  //value={name}
-                  // onChange={handleChange}
+                  name="name"
                   required
                 />
               </FormControl>
               <FormControl className="modal__form__formControl" required>
                 <TextField
                   label={labels.lblDescp}
-                  //value={name}
-                  // onChange={handleChange}
+                  name="description"
                   required
                   multiline
                   rows={4}
@@ -62,7 +56,6 @@ export const AddUserModal = ({ openModal, handleOpen }) => {
                   type="submit"
                   variant="contained"
                   className="modal__buttonBox__button"
-                  // onClick={this.props.onSubmit}
                 >
                   {labels.lblBtn}
                 </Button>

@@ -10,7 +10,7 @@
 
 > Javascript
 
-Descripción del proyecto : Proyecto app web para la gestión de usuarios. Se puede listar, añadir y eliminar usuarios. Para el back se usa el proyecto [frontend-test](https://github.com/Beetrack/frontend-test).
+Descripción del proyecto : Proyecto app web para la gestión de usuarios. Se puede listar, añadir y eliminar usuarios. Para el back se usa el proyecto [frontend-test](https://github.com/Beetrack/frontend-test) el cual debe estar corriendo con las instrucciones propias del proyecto para el correcto funcionamiento de este proyecto.
 
 ![Home Photo](./src/assets/img/home.png)
 

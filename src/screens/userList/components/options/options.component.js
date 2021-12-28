@@ -4,13 +4,14 @@ import { AiFillPlusCircle } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 import labels from "./labels";
 
-export const options = ({handleOpen}) => {
+export const options = ({handleOpen, handleSearch}) => {
   return (
     <Box className="header">
       <OutlinedInput
         className="header__searchBar"
         placeholder={labels.descBuscar}
         color="primary"
+        onChange={handleSearch}
         startAdornment={
           <InputAdornment position="start">
             <FaSearch className="iconSearch" size='1.3em'/>

@@ -1,8 +1,8 @@
-import './App.scss';
-import UserListScreen from './screens/userList/userList.screen';
+import "./App.scss";
+import HomeScreen from "./screens/userList/home.screen";
 
 function App() {
-  return <UserListScreen />;
+  return <HomeScreen />;
 }
 
 export default App;
